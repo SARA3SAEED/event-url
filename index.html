@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Website in Different Device Sizes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .input-container {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        #urlInput{
+            width: 96%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .cards {
+            display: flex;
+            gap: 10px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            width: 150px;
+            text-align: center;
+        }
+        .card button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="input-container">
+        <input type="text" id="urlInput" placeholder="Enter website URL">
+    </div>
+
+
+    <div class="cards">
+        <div class="card">
+            <img src="data:image/jpeg;base64,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" width="70%">
+            <h3>Laptop</h3>
+            <button onclick="redirectToDevice('laptop')">Open</button>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzyRDCNeLqv49V2pcIWIj0I2EG2cREPj89fg&s" width="70%">
+            <h3>Tablet</h3>
+            <button onclick="redirectToDevice('tablet')">Open</button>
+        </div>
+
+        <div class="card">
+            <img width="70%" src="data:image/jpeg;base64,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">
+            <h3>Samsung</h3>
+            <button onclick="redirectToDevice('samsung')">Open</button>
+        </div>
+
+        <div class="card">
+            <img width="60%" src="data:image/png;base64,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">
+            <h3>iPhone</h3>
+            <button onclick="redirectToDevice('iphone')">Open</button>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    // Redirects the user to a website in a different device size.
+    function redirectToDevice(device) {
+        const url = document.getElementById('urlInput').value;
+        if (!url) {
+            alert('Please enter a website URL');
+            return;
+        }
+
+        let deviceWidth, deviceHeight;
+        switch (device) {
+            case 'laptop':
+                deviceWidth = 1440;
+                deviceHeight = 900;
+                break;
+            case 'tablet':
+                deviceWidth = 768;
+                deviceHeight = 1024;
+                break;
+            case 'samsung':
+                deviceWidth = 360;
+                deviceHeight = 740;
+                break;
+            case 'iphone':
+                deviceWidth = 375;
+                deviceHeight = 667;
+                break;
+            default:
+                return;
+        }
+
+        window.open(`https://${url}`, '_blank', `width=${deviceWidth},height=${deviceHeight}`);
+    }
+</script>
+
+</body>
+</html>
